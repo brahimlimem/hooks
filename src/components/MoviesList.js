@@ -47,8 +47,8 @@ console.log(ajouter);
 <Navbar  search={search}/>
 <Add a={add}/>
 
-<div className="card" >
-        <img src={showimg} className='container'  alt="..." width="50px" height="200px"/>
+<div className="text-center" >
+        <img src={showimg} className='rounded'  alt="..." width="500" height="600px"/>
 </div>
 
 <div className="container" >
