@@ -1,13 +1,16 @@
 import React,{useState} from 'react';
 
 export default function Navbar({search}) {
-
-  const [findtitre, setfindtitre] = useState("");
-
+const [findtitre, setfindtitre] = useState("");
+const cherchersubmit=(event)=>{
+event.preventDefault();
+search(findtitre)
+setfindtitre("");
+  }
   return (
     <div key="5">
-    <form onSubmit={()=>search(findtitre)} className="d-flex">
-        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" onChange={(e)=>setfindtitre(e.target.value)}/>
+    <form onSubmit={cherchersubmit} className="d-flex">
+        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" value={findtitre} onChange={(e)=>setfindtitre(e.target.value)}/>
         <button className="btn btn-outline-success" type="submit" >Search</button>
       </form>
 <nav className="navbar navbar-expand-lg navbar-light bg-light">

@@ -30,14 +30,14 @@ const show=(rl)=>{
             setshowimg(rl);
 }
 
-const search=(x)=>{
-
-setdata(data.filter(item=>item.titre.includes(x)));
+const search=(e)=>{
+ const x=data.filter(el=>el.titre.includes(e));       
+setdata(x);
 
 } 
 const add=(ajouter)=>{
-//setdata([...data.concat(ajouter)]);
-
+setdata([...data.concat(ajouter)]);
+console.log(ajouter);
 };
     return (
 
@@ -45,7 +45,7 @@ const add=(ajouter)=>{
 <div key="2">
 
 <Navbar  search={search}/>
-<Add add={add}/>
+<Add a={add}/>
 
 <div className="card" >
         <img src={showimg} className='container'  alt="..." width="50px" height="200px"/>

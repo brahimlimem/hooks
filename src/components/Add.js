@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 
-export default function Add({ajouterr}) {
+export default function Add({a}) {
 
 const [ajouter,setajouter]=useState({
   id:Math.random(),
@@ -8,12 +8,11 @@ const [ajouter,setajouter]=useState({
   description:"",
   url:"",
   rating:"",
-  key:Math.random()
-}
-);
+  key:Math.random(),
+});
 const addsubmit=(event)=>{
 event.preventDefault();
-ajouterr(ajouter)
+a(ajouter)
 setajouter({
 id:Math.random(),
   titre:"",
@@ -21,7 +20,6 @@ id:Math.random(),
   url:"",
   rating:"",
   key:Math.random(),
-
 })
 }
     return (
